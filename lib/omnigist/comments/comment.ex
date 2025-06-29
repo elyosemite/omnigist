@@ -6,8 +6,8 @@ defmodule Omnigist.Comments.Comment do
   @foreign_key_type :binary_id
   schema "comments" do
     field :markup_text, :string
-    field :user_id, :binary_id
-    field :gist_id, :binary_id
+    belongs_to :user, Omnigist.Accounts.User
+    belongs_to :gist, Omnigist.Gists.Gist
 
     timestamps(type: :utc_datetime)
   end
