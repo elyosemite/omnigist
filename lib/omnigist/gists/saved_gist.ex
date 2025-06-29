@@ -6,8 +6,8 @@ defmodule Omnigist.Gists.SavedGist do
   @foreign_key_type :binary_id
   schema "saved_gists" do
 
-    field :user_id, :binary_id
-    field :gist_id, :binary_id
+    belongs_to :user, Omnigist.Accounts.User
+    belongs_to :gist, Omnigist.Gists.Gist
 
     timestamps(type: :utc_datetime)
   end
