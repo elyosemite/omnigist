@@ -15,7 +15,7 @@ defmodule Omnigist.Comments.Comment do
   @doc false
   def changeset(comment, attrs) do
     comment
-    |> cast(attrs, [:markup_text])
-    |> validate_required([:markup_text])
+    |> cast(attrs, [:markup_text, :user_id, :gist_id])
+    |> validate_required([:markup_text, :user_id, :gist_id])
   end
 end
