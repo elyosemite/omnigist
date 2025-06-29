@@ -15,7 +15,7 @@ defmodule Omnigist.Gists.SavedGist do
   @doc false
   def changeset(saved_gist, attrs) do
     saved_gist
-    |> cast(attrs, [])
-    |> validate_required([])
+    |> cast(attrs, [:user_id, :gist_id])
+    |> validate_required([:user_id, :gist_id])
   end
 end
