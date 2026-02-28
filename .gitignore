@@ -41,3 +41,6 @@ npm-debug.log
 
 # Ignore Elixir's build artifacts
 mix.lock
+
+# Ignore secret
+/config/dev.exs
