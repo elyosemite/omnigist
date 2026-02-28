@@ -80,3 +80,6 @@ config :phoenix_live_view,
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false
+
+# token for GitHub API
+config :omnigist, github_token: "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"

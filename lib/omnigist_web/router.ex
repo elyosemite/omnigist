@@ -82,4 +82,11 @@ defmodule OmnigistWeb.Router do
       live "/users/confirm", UserConfirmationInstructionsLive, :new
     end
   end
+
+  scope "/api/v1", OmnigistWeb.API, as: :api do
+    pipe_through :api
+
+    get "/github/repos/:owner/:repo",    GitHubController, :show
+    get "/github/users/:username/repos", GitHubController, :index
+  end
 end

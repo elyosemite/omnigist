@@ -10,7 +10,7 @@
 
 ## Contexto Técnico
 
-Repositórios não são clonados nem gerenciados pelo Omnigist — eles já existem no filesystem. O sistema apenas registra o caminho e atribui um UUID para referência futura. Não há autenticação nesta fase.
+Repositórios não são clonados nem gerenciados pelo Omnigist por enquanto — eles já existem no filesystem. O sistema apenas registra o caminho e atribui um UUID para referência futura. Não há autenticação nesta fase.
 
 ---
 
