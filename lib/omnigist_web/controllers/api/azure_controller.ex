@@ -11,4 +11,12 @@ defmodule OmnigistWeb.Api.AzureController do
       render(conn, :projects, projects: projects)
     end
   end
+
+  def repositories(conn, %{"org" => org, "project" => project}) do
+    token = Application.fetch_env!(:omnigist, :azure_token)
+
+    with {:ok, repositories} <- Azure.list_repositories(org, project, token) do
+      render(conn, :repositories, repositories: repositories)
+    end
+  end
 end
