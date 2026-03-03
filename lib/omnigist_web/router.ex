@@ -89,7 +89,7 @@ defmodule OmnigistWeb.Router do
     get "/github/repos/:owner/:repo",    GitHubController, :show
     get "/github/users/:username/repos", GitHubController, :index
 
-    get "azure/:org/:projects",             AzureController, :projects
-    get "azure/:org/:project/repositories", AzureController, :repositories
+    get "/azure/:org/:projects",             AzureController, :projects
+    get "/azure/:org/:project/repositories", AzureController, :repositories
   end
 end
