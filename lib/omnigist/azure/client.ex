@@ -17,7 +17,7 @@ defmodule Omnigist.Azure.Client do
   end
 
   defp handle_response({:ok, {{_, 200, _}, _headers, body}}) do
-    {:ok, Jason.decode!(body)}
+    {:ok, Jason.decode!(List.to_string(body))}
   end
 
   defp handle_response({:ok, {{_, status, _}, _headers, body}}) do
