@@ -1,5 +1,5 @@
 defmodule OmnigistWeb.API.AzureJSON do
-  def projecfts(%{projects: projects}) do
+  def projects(%{projects: projects}) do
     %{data: Enum.map(projects, &project_data/1)}
   end
 
