@@ -1,4 +1,4 @@
-defmodule OmnigistWeb.Api.AzureController do
+defmodule OmnigistWeb.API.AzureController do
   use OmnigistWeb, :controller
 
   alias Omnigist.Azure
