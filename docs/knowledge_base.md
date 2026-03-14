@@ -128,5 +128,3 @@ Registre os endpoints no escopo de API.
 4.  **External**: O `Client` faz a requisição via `:httpc`.
 5.  **Response**: O `Client` decodifica o JSON e retorna structs/mapas.
 6.  **Render**: O controller chama o `GitLabJSON` para formatar a resposta final.
-
----
